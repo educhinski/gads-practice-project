@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1" />
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=yes" />
+  <meta name="description" content="Simple weather app, installable as a stand-alone app, 
+    using openweathermap api(uses no framework)" />
+  <meta name="keywords"
+    content="weather, openweathermap, mambo, local search" />
+  <meta name="author" content="Edwin Mambo" />
+  <meta name="theme-color" content="#34495E" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Lato:wght@300;400&family=Leckerli+One&family=Noto+Sans+KR:wght@400;500&family=Open+Sans:wght@300;400&display=swap"
+    rel="stylesheet" />
+  <link rel="apple-touch-icon" href="/favicons/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="/favicons/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="manifest" href="/weather.webmanifest" />
+  <title>Mambo Weather</title>
+</head>
+
+<body>
+  <header>
+    <img class="bg" src="/favicons/android-chrome-192x192.png"
+      alt="Mambo Weather Logo" />
+    <img class="sm" src="/favicons/favicon.ico" alt="Mambo Weather Logo" />
+  </header>
+
+  <main class="main">
+    <h1>Mambo Weather</h1>
+    <p class="welcome">Welcome to Mambo Weather</p>
+    <p class="error hidden">This is a sample error</p>
+
+    <form id="form">
+      <legend>Location</legend>
+      <input type="radio" name="location" id="location">
+      <label for="location">Detect my location</label>
+      <section class="loc">
+        <h2 class="hidden">Search</h2>
+        <input type="search" id="search" name="search" placeholder="Search">
+        <label for="search" class="hidden">Search:</label>
+        <button type="submit" class="btn">Search</button>
+      </section>
+    </form>
+
+    <section class="top hidden">
+      <h2>Search Results</h2>
+      <p class="city">Location</p>
+      <p class="weather">
+        <span class="icon">
+          <img src="/icons/unknown.png" alt="Weather Icon">
+        </span>
+        <span class="temp">-</span>
+        <span class="units">
+          <span id="celsius" class="active">C</span>
+          <span id="farenheit">F</span>
+        </span>
+      </p>
+      <p class="high-low">
+        <span id="high">22</span>
+        <span class="deg">/</span>
+        <span id="low">13</span>
+      </p>
+      <p class="description">--weather--</p>
+      <p class="humid-wind">
+        <span id="humidity">Humidity: __ %</span>
+        <span id="feel-like">Feels like: __ °C</span>
+        <span id="wind">Wind: __ m/s</span>
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="credit hidden">
+      <span>Data from:
+        <a href="https://openweathermap.org/">openWeather</a>
+      </span>
+      <span>Created By:
+        <a href="https://www.linkedin.com/in/edwin-mambo">Edwin Mambo</a>
+      </span>
+      <span>last updated:
+        <span id="last-updated">--:--</span>
+      </span>
+    </p>
+  </footer>
+  <script src="/js/app.js"></script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js">
+  </script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js">
+  </script>
+
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyDUvxluV8SInZbBejr8Gl_P-yiR9vbbCfk",
+      authDomain: "gads-practice-project-251df.firebaseapp.com",
+      databaseURL: "https://gads-practice-project-251df.firebaseio.com",
+      projectId: "gads-practice-project-251df",
+      storageBucket: "gads-practice-project-251df.appspot.com",
+      messagingSenderId: "1071293090247",
+      appId: "1:1071293090247:web:902f61460917951d78f1e2",
+      measurementId: "G-VE35T5TJCJ"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+  </script>
+</body>
+</html>

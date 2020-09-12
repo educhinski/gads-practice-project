@@ -1,0 +1,382 @@
+body {
+  max-width: 1200px;
+  min-width: 400px;
+  padding: 0;
+  margin: 0 auto;
+  background: #29297a;
+  color: #f5f5f5;
+}
+
+h1 {
+  font: 700 6em 'Leckerli One', sans-serif;
+  letter-spacing: .1em;
+  padding: 0;
+  margin: 0 0 1em;
+}
+
+h2 {
+  font: 700 4em 'Karla', sans-serif;
+}
+
+.hidden {
+  display: none;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.error {
+  font: 400 1.5em 'Karla', sans-serif;
+  letter-spacing: .1em;
+  word-spacing: .3em;
+}
+
+.error::before,
+.error::after {
+  content: " !! ";
+  padding: 0 .5em;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  margin: 3em 0;
+}
+
+.sm {
+  display: none;
+}
+
+.main {
+  text-align: center;
+  width: 70%;
+  height: 100%;
+  margin: 0;
+  padding: 5% 15%;
+}
+
+.welcome {
+  font: 500 2em 'Lato', sans-serif;
+  margin-top: -2em;
+  margin-bottom: 2em;
+  letter-spacing: .1em;
+}
+
+form legend,
+form label {
+  font: 400 1.5em 'Open Sans', sans-serif;
+}
+
+.loc {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+input[type="radio"] {
+  margin: 3em 0;
+}
+
+label {
+  padding-left: 1em;
+}
+
+.loc input {
+  font-size: 1.1em;
+  padding: .6em 1em .6em 1em;
+  border-radius: 0;
+  border: none;
+  width: 70%;
+}
+
+.btn {
+  color: #ffffff;
+  font-size: 1.3em;
+  padding: .4em 3em;
+  border-radius: 0;
+  border: 1px solid #e0e0e094;
+  background: #1a29367a;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 1;
+  background: #0aa7d6;
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-top: 3em;
+}
+
+.icon {
+  padding: 0 5em;
+  opacity: 1 !important;
+}
+
+.weather {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.city {
+  font: 500 2em 'Segoe UI', sans-serif;
+  letter-spacing: .1em;
+}
+
+.temp {
+  font: 300 7em 'Open Sans', sans-serif;
+  letter-spacing: .1em;
+  padding: 0 1em;
+  padding-right: .5em;
+  position: relative;
+  right: 1.1em;
+}
+
+.temp::after {
+  content: "°";
+}
+
+.units {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font: 400 1.2em 'Open Sans', sans-serif;
+  margin-right: 2em;
+}
+
+.units span {
+  margin-top: -1em;
+  opacity: 0.6;
+  padding: .4em .6em;
+}
+
+.units span.active {
+  font-size: 1.5em;
+  opacity: .85;
+}
+
+.units span:hover {
+  opacity: 1;
+  cursor: pointer;
+  box-shadow: .5em .5em 5em #00000050;
+}
+
+.high-low {
+  font: 400 2em 'Open Sans', sans-serif;
+  padding: .2em 0;
+  margin-top: -1.1em;
+  margin-left: 1em;
+  letter-spacing: .1em;
+}
+
+.high-low span:first-of-type {
+  font: 400 .9em/1.2 'Open Sans', sans-serif;
+}
+
+.high-low span:last-child {
+  font: 300 .9em/1.2 'Open Sans', sans-serif;
+}
+
+.high-low span:first-of-type::after,
+.high-low span:last-of-type::after {
+  content: "°";
+}
+
+.deg {
+  font-size: 1.3em;
+  line-height: 1.1;
+  padding: 0 .6em;
+}
+
+.description {
+  font: 400 1.5em 'Karla', sans-serif;
+  padding: .2em 0;
+  margin-top: 0em;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+
+.last-updated {
+  font: 400 1.1em 'Open Sans', sans-serif;
+  margin-top: 0;
+}
+
+.last-updated span {
+  font: 400 1em 'Lato', sans-serif;
+  letter-spacing: .2em;
+  padding-left: .5em;
+}
+
+.humid-wind {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+
+.humid-wind span {
+  font: 400 1.3em 'Segoe UI', sans-serif;
+  letter-spacing: .1em;
+}
+
+.humid-wind span:last-child {
+  text-transform: none;
+}
+
+.credit {
+  display: flex;
+  justify-content: space-evenly;
+  font: 300 1em 'Open Sans', sans-serif;
+  padding: .5em 0;
+  margin-bottom: 3em;
+  text-transform: capitalize;
+  letter-spacing: .1em;
+}
+
+.credit a {
+  color: #f5f5f5;
+  text-decoration: none;
+  font: 500 1.1em 'Segoe UI', sans-serif;
+  opacity: .7;
+}
+
+.credit a:hover {
+  text-decoration: underline;
+  opacity: 1;
+}
+
+.credit span:first-child {
+  padding-left: 2em;
+}
+
+.credit span:last-child {
+  padding-right: 2em;
+}
+
+.credit span span {
+  font: 400 1.5em 'Lato', sans-serif;
+  letter-spacing: .1em;
+}
+
+/* For width 900px and smaller */
+@media only screen and (max-width: 900px) {
+
+  /* responsive search */
+  .loc {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  .loc input {
+    width: 80%;
+    margin-bottom: 1em;
+  }
+
+  /* responsive footer */
+  .credit {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+
+  .credit span:first-child,
+  .credit span:last-child {
+    padding: 0;
+    margin: 0;
+  }
+
+  .credit span {
+    padding: .5em 0;
+    margin: 1em 0;
+  }
+}
+
+/* For screens 800 and smaller */
+@media only screen and (max-width: 800px) {
+
+  /* responsive humid-wind */
+  .humid-wind {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+  }
+
+  .humid-wind span {
+    margin: .5em 0;
+  }
+}
+
+/* For screens 600 and smaller */
+@media only screen and (max-width: 600px) {
+
+  /* responsive weather */
+  .weather {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon {
+    padding: 0 5em;
+    opacity: 1 !important;
+  }
+
+  .weather {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+  }
+
+  .temp {
+    padding: 0;
+    position: unset;
+  }
+
+  .units {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    margin: 1em 0;
+    width: 50%;
+  }
+}
+
+/* For screens 500px and smaller */
+@media only screen and (max-width: 500px) {
+  h1 {
+    font-size: 4em;
+    padding-bottom: 1em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  .bg {
+    display: none;
+  }
+
+  .sm {
+    display: block;
+  }
+
+  .loc input,
+  .btn {
+    width: 100%;
+  }
+}

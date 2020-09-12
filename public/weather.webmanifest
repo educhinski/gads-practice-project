@@ -1,0 +1,38 @@
+{
+  "name": "Mambo Weather",
+  "short_name": "MamboWeather",
+  "description": "Mambo Weather App",
+  "icons": [{
+    "src": "/favicons/favicon-16x16.png",
+    "type": "image/png",
+    "sizes": "16x16"
+  }, {
+    "src": "/favicons/favicon-32x32.png",
+    "type": "image/png",
+    "sizes": "32x32"
+  }, {
+    "src": "/favicons/apple-touch-icon.png",
+    "type": "image/png",
+    "sizes": "180x180"
+  }, {
+    "src": "/favicons/android-chrome-192x192.png",
+    "type": "image/png",
+    "sizes": "192x192"
+  }, {
+    "src": "/favicons/android-chrome-512x512.png",
+    "type": "image/png",
+    "sizes": "512x512"
+  }],
+  "start_url": "/",
+  "orientation": "any",
+  "display": "standalone",
+  "background_color": "#3498DB",
+  "theme_color": "#34495E",
+  "dir": "ltr",
+  "lang": "en-US",
+  "scope": "/",
+  "serviceworker": {
+    "sr": "/worker.js",
+    "scope": "/"
+  }
+}
